@@ -4,7 +4,12 @@
 {% for cat in cats %}
   <div class="card">
     <div class="card-content">
-      <span class="card-title">{{ cat.name }}</span>
+      <span class="card-title">
+        <a href="/cats/{{ cat.id }}">
+          {{ cat.name }}
+        </a>
+        </span>
+        {{ cat.name }}</span>
       <p>Breed: {{ cat.breed }}</p>
       <p>Description: {{ cat.description }}</p>
       {% if cat.age > 0 %}
